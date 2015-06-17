@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.nuxeo.widgets.dynamicRendererWidgetsContrib">
+ 
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="widgettypes">
+ 
+    <widgetType name="dynamicRendererWidget_checkbox">
+      <handler-class>
+        org.nuxeo.ecm.platform.forms.layout.facelets.plugins.TemplateWidgetTypeHandler
+      </handler-class>
+      <property name="template">
+        /widgets/dynamicRendererWidget_checkbox.xhtml
+      </property>
+    </widgetType>
+ 
+  </extension>
+ 
+</component>

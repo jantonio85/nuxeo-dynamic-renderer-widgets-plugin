@@ -1,0 +1,33 @@
+<div xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:nxu="http://nuxeo.org/nxweb/util"
+	xmlns:nxdir="http://nuxeo.org/nxdirectory"
+	xmlns:corresp="http://com.nuxeo.projects.correspondence/"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:nxl="http://nuxeo.org/nxforms/layout">
+
+	<c:choose>
+		<c:when test="#{widget.mode eq 'plain' or widget.mode eq 'edit'}">
+			<a4j:region id="dynamicRendererWidget_checkbox">
+				<h:selectBooleanCheckbox value="#{field_0}" id="#{widget.id}_select"
+					required="#{widget.properties['required']}">
+					<f:ajax event="change" execute="@this"
+						render="nxl_#{currentTabAction.id}_tabLayout:nxl_#{currentTabAction.id}_tabLayout"
+						onevent="function(data) { if (data.status === 'success') { 
+						console.log('View has been refreshed id: nxl_#{currentTabAction.id}_tabLayout:nxl_#{currentTabAction.id}_tabLayout');
+						 } }">
+					</f:ajax>
+				</h:selectBooleanCheckbox>
+				<h:message styleClass="errorMessage" for="#{widget.id}_select"
+					id="#{widget.id}_message" />
+			</a4j:region>
+		</c:when>
+		<c:otherwise>
+			<h:selectBooleanCheckbox value="#{field_0}" id="#{widget.id}_select"
+				required="#{widget.properties['required']}" readonly="true">
+			</h:selectBooleanCheckbox>
+		</c:otherwise>
+	</c:choose>
+</div>

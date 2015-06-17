@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.athento.nuxeo.widgets
+Bundle-Version: 1.1.0
+Bundle-Name: dynamicRendererWidgets
+Require-Bundle: org.nuxeo.runtime
+Bundle-ManifestVersion: 2
+Nuxeo-Component: OSGI-INF/widget-types-contrib.xml
+Bundle-Vendor: Athento
+Created-By: Athento
+
