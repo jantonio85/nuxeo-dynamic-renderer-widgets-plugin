@@ -43,3 +43,6 @@ For example:
         		</widgetModes>
 			</widget>
 ```
+## Widget Types
+When you deploy this plugin in Nuxeo, all these new widget types will be available:
+- dynamicRendererWidget_checkbox
