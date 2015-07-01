@@ -1,6 +1,7 @@
 # nuxeo-dynamic-renderer-widgets-plugin
 This plugin creates some widget types to be used in other Nuxeo plugins. This widget types updates the current tab when it's value is changed.
 
+
 ## Installation
 
 Just download & compile the pom.xml using Maven and deploy the plugin in 
